@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class currencyconverter {
+    static void currencyconverte(int value){
+        Scanner sc2= new Scanner(System.in);
+        System.out.println("Enter how much Rupees you have....");
+        int rupeevalue  = sc2.nextInt();
+        switch (value){
+            case 1:
+                System.out.println("Euro(EUR) value of "+rupeevalue+" Rupee is "+(rupeevalue*0.0112));
+                break;
+            case 2:
+            System.out.println("Pound (GBP) value of "+rupeevalue+" Rupee is "+(rupeevalue*0.0098));
+            break;
+            case 3:
+                System.out.println("Australian dollar(AUD) value of "+rupeevalue+" Rupee is "+(rupeevalue*0.0189));
+                break;
+            case 4:
+                System.out.println("Canadian dollar(CAD) value of "+rupeevalue+" Rupee is "+(rupeevalue*0.01166));
+                break;
+            case 5:
+                System.out.println("Swiss franc (CHF) value of "+rupeevalue+" Rupee is "+(rupeevalue*0.0108));
+                break;
+            case 6:
+                System.out.println("American Dollar (USD) value of "+rupeevalue+" Rupee is "+(rupeevalue*0.012));
+                break;
+            default:
+                System.out.println("invalid input");
+                break;
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("currency calculator");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1.Rupee to Euro (EUR)");
+        System.out.println("2.Rupee to Pound (GBP)");
+        System.out.println("3.Rupee to Australian dollar(AUD) ");
+        System.out.println("4.Rupee to Canadian dollar(CAD) ");
+        System.out.println("5.Rupee to Swiss franc (CHF)");
+        System.out.println("6.Rupee to American Dollar (USD)");
+        System.out.println("Select option....");
+
+        int userinput = sc.nextInt();
+        System.out.println("\n");
+        currencyconverte(userinput);
+        System.out.println("\n");
+        System.out.println("Thank you.....");
+
+    }
+}
