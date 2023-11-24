@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class gradecalculator {
+
+
+    public static void main(String[] args) {
+        Scanner marks = new Scanner(System.in);
+        System.out.println("enter the total marks of CSBS subjects:");
+        System.out.println("Enter the total marks: ");
+        float total_marks = (float) marks.nextInt();
+        System.out.println("Enter the each subject marks: ");
+        System.out.println("Enter the OOPS marks");
+        int OOPS = marks.nextInt();
+        System.out.println("Enter the OS marks");
+        int OS = marks.nextInt();
+        System.out.println("Enter the DAA marks");
+        int DAA = marks.nextInt();
+        System.out.println("Enter the KAN marks");
+        int KAN = marks.nextInt();
+        System.out.println("Enter the MATHS marks");
+        int MATHS = marks.nextInt();
+        int sum = OOPS + OS + DAA + KAN + MATHS;
+        System.out.println("The sum of total marks in 100 is: ");
+        System.out.println(sum);
+        int multi = sum * 100;
+        float percentage = multi / total_marks;
+        System.out.println("the percentage is:" + percentage);
+        char grade = calculategrade(percentage);
+        System.out.println("the grade is: " + grade);
+
+    }
+
+    private static char calculategrade(double percentage) {
+        if (percentage >= 90) {
+            return 'A';
+
+        } else if (percentage >= 80) {
+            return 'B';
+
+
+        } else if (percentage >= 70) {
+            return 'C';
+
+        } else if (percentage >= 60) {
+            return 'D';
+
+        } else if (percentage >= 50) {
+            return 'E';
+        } else if (percentage<50) {
+            return 'F';
+        }
+   return 0; }
+}
