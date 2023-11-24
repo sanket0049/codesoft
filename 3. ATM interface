@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class atminterface {
+    public static void main(String[] args) {
+        int balance = 0;
+        int withdraw = 0;
+        int deposit = 0;
+        Scanner sc = new Scanner(System.in);
+        while (true){
+        System.out.println("-----**welcome to ATM**-----");
+        System.out.println("----------------------------");
+        System.out.println("option 1: Withdraw");
+        System.out.println("option 2: Deposit");
+        System.out.println("option 3: Check balance");
+        System.out.println("option 3: Exit");
+        System.out.println("choose any option above:---------");
+
+        int option = sc.nextInt();
+        switch (option) {
+            case 1:
+                System.out.println("Enter withdraw amount:");
+                withdraw = sc.nextInt();
+                if (balance < withdraw) {
+                    System.out.println("Sorry insufficient balance");
+                } else {
+                    balance = balance - withdraw;
+                    System.out.println("successfully withdrawn");
+                }
+                break;
+
+            case 2:
+                System.out.println("Enter deposit amount: ");
+                deposit = sc.nextInt();
+                balance = balance + deposit;
+                System.out.println("successfully deposited");
+                break;
+            case 3:
+                System.out.println("your account balance is:" + balance);
+                break;
+            case 4:
+                System.exit(0);
+                break;
+            default:
+                System.out.println("Please enter correct option: ");
+
+        }
+        }
+    }
+}
+
